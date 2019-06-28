@@ -17,10 +17,10 @@ public class DcController {
     private DiscoveryClient discoveryClient;
 
     @GetMapping("/dc")
-    public void dc(){
+    public String dc(){
         String description = "description:"+ discoveryClient.description();
         System.out.println(description);
-        List<String> services = discoveryClient.getServices();
-        services.forEach(System.out::println);
+        String s =  "Services: " + discoveryClient.getServices();
+        return s;
     }
 }

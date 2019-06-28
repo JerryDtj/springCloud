@@ -21,6 +21,7 @@
         <module>eureka-client</module>
         <module>eureka-consumer</module>
         <module>consul-client</module>
+        <module>consul-consumer</module>
     </modules>
 
     <dependencyManagement>
