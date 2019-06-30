@@ -14,7 +14,7 @@ public class DcController {
     @Autowired
     DcClient dcClient;
 
-    @GetMapping("`")
+    @GetMapping("/consumer")
     public String dc() {
         String result = dcClient.consumer();
         return result + "  eureck-consumer-feign";
