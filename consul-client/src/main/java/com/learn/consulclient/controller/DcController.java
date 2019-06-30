@@ -21,6 +21,6 @@ public class DcController {
         String description = "description:"+ discoveryClient.description();
         System.out.println(description);
         String s =  "Services: " + discoveryClient.getServices();
-        return s;
+        return s + "";
     }
 }
