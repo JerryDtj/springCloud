@@ -25,6 +25,8 @@
         <module>eureka-ribbon</module>
         <module>consul-client</module>
         <module>consul-consumer</module>
+        <module>feign-upload-server</module>
+        <module>feign-upload-client</module>
     </modules>
 
     <dependencyManagement>
