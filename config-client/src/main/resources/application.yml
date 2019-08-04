@@ -7,4 +7,4 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/JerryDtj/springCloud/tree/master/config-client
+          uri: https://github.com/JerryDtj/springCloud.git
