@@ -27,6 +27,7 @@
         <module>consul-consumer</module>
         <module>feign-upload-server</module>
         <module>feign-upload-client</module>
+        <module>config-client</module>
     </modules>
 
     <dependencyManagement>
