@@ -5,6 +5,7 @@ import org.apache.commons.fileupload.disk.DiskFileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.LogFactory;
+import org.apache.http.entity.ContentType;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -12,14 +13,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 /**
  * @author Jerry
@@ -32,18 +31,11 @@ public class FileUploadControllerTest {
     private FileUploadService fileUploadService;
 
     @Test
-    public void fileUpload() {
+    public void fileUpload() throws IOException {
         File file = new File("/Users/dengtianjiao/Documents/image.png");
-        DiskFileItem fileItem = (DiskFileItem) new DiskFileItemFactory().createItem("file",
-                MediaType.TEXT_PLAIN_VALUE, true, file.getName());
-
-        try (InputStream input = new FileInputStream(file); OutputStream os = fileItem.getOutputStream()) {
-            IOUtils.copy(input, os);
-        } catch (Exception e) {
-            throw new IllegalArgumentException("Invalid file: " + e, e);
-        }
-
-        MultipartFile multi = new CommonsMultipartFile(fileItem);
-        fileUploadService.fileUpload(multi);
+        FileInputStream fileInputStream = new FileInputStream(file);
+        MultipartFile multipartFile = new MockMultipartFile("copy" + file.getName(), file.getName(), ContentType.APPLICATION_OCTET_STREAM.toString(), fileInputStream);
+        System.out.println(multipartFile.getName());
+        fileUploadService.fileUpload(multipartFile);
     }
 }
