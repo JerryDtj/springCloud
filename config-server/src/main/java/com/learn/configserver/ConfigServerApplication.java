@@ -1,4 +1,4 @@
-package com.learn.configclient;
+package com.learn.configserver;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
