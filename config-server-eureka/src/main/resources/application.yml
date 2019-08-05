@@ -1,0 +1,17 @@
+server:
+  port: 10082
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/JerryDtj/springCloud.git
+          search-paths: config-repo
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1001/eureka/
