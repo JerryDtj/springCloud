@@ -4,8 +4,9 @@
 
 # IntelliJ project files
 .idea
-.idea/springCloud.iml
 out
 gen
 config-server/target/
 config-server/config-server.iml
+*/*.iml
+*.iml
