@@ -1,0 +1,21 @@
+server:
+  port: 10083
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server-eureka
+      profile: dev
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1001/eureka/
+
+management:
+  security:
+    enabled: false
