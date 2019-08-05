@@ -2,10 +2,13 @@ server:
   port: 10080
 spring:
   application:
+#    项目地址
     name: config-server
   cloud:
     config:
       server:
+#        对应的git地址
         git:
           uri: https://github.com/JerryDtj/springCloud.git
+#          查找目录，如果server项目为单独一个项目，不为一个子模块，这个可以不要
           search-paths: config-repo
