@@ -16,6 +16,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
     <modules>
         <module>eureka-server</module>
         <module>eureka-client</module>
