@@ -5,6 +5,6 @@ spring:
     name: config-client
   cloud:
     config:
-      uri: http://localhost:10080
+      uri: http://localhost:10080/
       profile: default
       label: master
