@@ -8,3 +8,4 @@
 out
 gen
 config-server/target/
+config-server/config-server.iml
