@@ -16,6 +16,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:1001/eureka/
 
+#如果不加这个，访问refresh 会报401 Full authentication is required to access this resource.错误
 management:
   security:
     enabled: false
