@@ -37,7 +37,8 @@
         <module>config-client-eureka</module>
         <module>eureka-ribbon-hystrix</module>
         <module>eureka-client-hystrix</module>
-        <module>hystrix-dashbord</module>
+        <module>hystrix-dashboard</module>
+        <module>turbine-http</module>
     </modules>
 
     <dependencyManagement>
