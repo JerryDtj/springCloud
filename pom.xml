@@ -39,6 +39,8 @@
         <module>eureka-client-hystrix</module>
         <module>hystrix-dashboard</module>
         <module>turbine-http</module>
+        <module>turbine-rabbitmq</module>
+        <module>eureka-ribbon-hystrix-rabbitmq</module>
     </modules>
 
     <dependencyManagement>
